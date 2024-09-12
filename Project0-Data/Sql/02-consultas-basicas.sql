@@ -1,11 +1,9 @@
 
 -- Ejercicio 1: Seleccionar todos los campos de la tabla `customers` y renombrar la columna `CustomerId` a `ID`.
-
 select * from "Customer" c;
 
 ALTER TABLE "Customer"
 RENAME COLUMN "CustomerId" TO "ID";
-
 
 -- Ejercicio 2: Seleccionar los nombres de los clientes (`FirstName`, `LastName`) y renombrar las columnas a `First_Name` y `Last_Name`.
 select "FirstName", "LastName" from "Customer" c;
@@ -89,9 +87,8 @@ and "SupportRepId" >= 5;
 select "InvoiceId", "Total" from "Invoice" i
 where "Total"  > 10
 and "CustomerId" < 50;
+
 -- Ejercicio 14: Lista las pistas que tienen una duración mayor a 250,000 milisegundos y pertenecen a un tipo de medio con ID 1 o 2. Muestra el nombre de la pista y el tipo de medio.
 select  "Track_Name", "MediaTypeId" from "Track" t 
 where "Duration_Minutes" > 250000
 and ("MediaTypeId" = 1 or "MediaTypeId" = 2);
-
-
